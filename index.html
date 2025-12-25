@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arooba Kinza | Content Architect Portfolio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Inter:wght@300;400;700&display=swap');
+
+        :root {
+            --bg: #fdfcf9;
+            --text: #1a1a1a;
+            --accent: #7d6e5d;
+            --border: #e8e4df;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .hero-content h2 {
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            line-height: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #555;
+            margin-bottom: 45px;
+        }
+
+        .btn-main {
+            padding: 18px 45px;
+            background: var(--text);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            background: var(--accent);
+        }
+
+        /* SECTION HEADER */
+        .section-header {
+            margin: 80px 0 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-header h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-style: italic;
+        }
+
+        /* VAULT */
+        .vault-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .vault-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            transition: 0.4s;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vault-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--text);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #f4f1ee;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-body {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .type {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-body h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+
+        .card-body p {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn-text {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text);
+            border-bottom: 1px solid var(--text);
+            padding-bottom: 2px;
+            transition: 0.3s;
+        }
+
+        .btn-text:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* INFO */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 80px;
+            margin-top: 80px;
+        }
+
+        .exp-item {
+            margin-bottom: 35px;
+        }
+
+        .exp-item b {
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .exp-item i {
+            color: var(--accent);
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .tag-list {
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .tag-list li {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .label {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 120px;
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Content Architect & AI Strategist</h2>
+            <h1>Arooba<br>Kinza</h1>
+            <p class="hero-tagline">
+                "I weave technical AI logic with the emotional depth of poetry to create narratives that connect."
+            </p>
+            <a href="mailto:aroobaroshanali@gmail.com?subject=Project Proposal" class="btn-main">
+                SEND A PROPOSAL
+            </a>
+        </div>
+    </section>
+
+    <div class="section-header">
+        <h3>The Vault</h3>
+        <p style="font-size:0.7rem;letter-spacing:2px;color:var(--accent);">SELECTED PROOFS</p>
+    </div>
+
+    <div class="vault-grid">
+        <div class="vault-card">
+            <img src="gemini-preview.jpg" class="card-img" alt="Gemini Guide">
+            <div class="card-body">
+                <span class="type">Technical White Paper</span>
+                <h4>Gemini 2.5: Peak Productivity Prompts</h4>
+                <p>10 Power Prompts covering automated report generation and task breakdowns.</p>
+                <a href="https://drive.google.com/file/d/1j7xpO1Jca03PxAdjYyCedaSwleMteMOE/view?usp=drive_link" class="btn-text">OPEN PDF</a>
+            </div>
+        </div>
+
+        <div class="vault-card">
+            <img src="upwork-post.jpg" class="card-img" alt="Upwork Masterclass">
+            <div class="card-body">
+                <span class="type">Event Copywriting</span>
+                <h4>Upwork Masterclass Registration</h4>
+                <p>High-conversion copy for university freelancing sessions.</p>
+                <a href="https://www.linkedin.com/posts/developer-student-club-dsu-powered-by-google-developers_we-are-pleased-to-introduce-muhammad-ali-activity-7408959798727057409-Kj1J" class="btn-text">SEE LIVE POST</a>
+            </div>
+        </div>
+
+        <div class="vault-card">
+            <img src="gdg-post.jpg" class="card-img" alt="GDG Storytelling">
+            <div class="card-body">
+                <span class="type">Community Growth</span>
+                <h4>GDG Orientation Storytelling</h4>
+                <p>Human-centric narratives to align and inspire developer teams.</p>
+                <a href="https://www.linkedin.com/posts/developer-student-club-dsu-powered-by-google-developers_techenthusiasts-communitybuilding-gdgoc-activity-7398766270206181376-BdIx" class="btn-text">VIEW ENGAGEMENT</a>
+            </div>
+        </div>
+
+        <div class="vault-card">
+            <img src="case-study-img.jpg" class="card-img" alt="Case Study">
+            <div class="card-body">
+                <span class="type">Case Study</span>
+                <h4>Optimizing Content Cycles with AI</h4>
+                <p>How I integrated custom GPT workflows to reduce editorial turnaround by 40%.</p>
+                <a href="https://drive.google.com/file/d/1s2Pw4U2_C0uO6uuHiIGK3t8wrCzSyC79/view?usp=drive_link" class="btn-text">READ CASE STUDY</a>
+            </div>
+        </div>
+
+        <div class="vault-card">
+            <img src="blog-img.jpg" class="card-img" alt="Blog Post">
+            <div class="card-body">
+                <span class="type">Blog / Thought Leadership</span>
+                <h4>The Poetic Side of Prompting</h4>
+                <p>Exploring why semantic nuance matters more than technical syntax in AI creative writing.</p>
+                <a href="https://drive.google.com/file/d/1b3-oj2XDnkLCZ7JnAvvLTeuchd2xW6MM/view?usp=drive_link" class="btn-text">READ ARTICLE</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div>
+            <div class="section-header"><h3>Experience</h3></div>
+            <div class="exp-item">
+                <b>Google Developer Student Club (GDSC)</b>
+                <i>Lead Content Writer</i>
+                <p>Technical communication and storytelling for developer communities.</p>
+            </div>
+            <div class="exp-item">
+                <b>AI Prompt Specialist</b>
+                <i>Alison Certified | Research-Driven</i>
+                <p>Prompt systems for summarization, code review, and automation.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-header"><h3>Connect</h3></div>
+            <ul class="tag-list">
+                <li><span class="label">Location</span><span>Karachi, Pakistan</span></li>
+                <li><span class="label">Email</span><span>aroobaroshanali@gmail.com</span></li>
+                <li><span class="label">LinkedIn</span><span>@arooba-kinza</span></li>
+            </ul>
+
+            <div class="section-header" style="margin-top:40px;"><h3>Toolkit</h3></div>
+            <p style="font-size:0.85rem;color:#666;">
+                ChatGPT • Gemini • SEO Research • Technical Writing • Event Marketing
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <h2 style="font-family:'Cormorant Garamond';font-size:2.8rem;font-style:italic;">
+            Ready to build?
+        </h2>
+        <p style="margin:30px 0;color:#666;">
+            Open to Content Strategy & AI Writing roles.
+        </p>
+        <a href="mailto:aroobaroshanali@gmail.com?subject=Job Inquiry" class="btn-main">
+            HIRE ME
+        </a>
+    </footer>
+
+</div>
+
+</body>
+</html>
